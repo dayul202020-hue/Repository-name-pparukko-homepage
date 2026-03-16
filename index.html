@@ -228,6 +228,25 @@
     }
     .mobile-call { background: #f2c544; color: #111; }
     .mobile-kakao { background: #161616; color: #fff; border-left: 1px solid rgba(255,255,255,.1); }
+    .floating-consult {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 90;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .floating-consult a {
+      min-width: 170px;
+      border-radius: 999px;
+      padding: 14px 18px;
+      font-weight: 900;
+      text-align: center;
+      box-shadow: 0 12px 30px rgba(0,0,0,.28);
+    }
+    .floating-phone { background:#f2c544; color:#111; }
+    .floating-kakao { background:#111; color:#fff; border:1px solid rgba(255,255,255,.12); }
 
     @media (max-width: 980px) {
       .hero-grid, .why-grid, .cases-grid, .calculator-grid, .contact-grid, .location-grid, .grid-3, .grid-2,
@@ -236,6 +255,7 @@
       .span-2 { grid-column: span 1; }
       .nav-links { display: none; }
       .mobile-bar { display: flex; }
+      .floating-consult { display:none; }
       footer { padding-bottom: 120px; }
       .hero-panel-top { flex-direction: column; align-items: flex-start; }
     }
@@ -268,8 +288,8 @@
           <h1>철거는 시원하게<br><span class="accent">마무리는 깔끔하게</span></h1>
           <p class="lead">빠루꼬 철거는 상가, 사무실, 주택 철거와 원상복구를 전문으로 합니다. 현장 상황에 맞는 맞춤 견적과 책임 있는 마감으로 빠르고 깔끔하게 대응합니다.</p>
           <div class="btns">
-            <a class="btn btn-primary" href="tel:010-XXXX-XXXX">전화 상담</a>
-            <a class="btn btn-outline" href="https://open.kakao.com/">카카오톡 상담</a>
+            <a class="btn btn-primary" href="tel:010-5422-2420">전화 상담</a>
+            <a class="btn btn-outline" href="https://open.kakao.com/o/ggAgrJli">카카오톡 상담</a>
             <a class="btn btn-ghost" href="#contact">무료 견적 문의</a>
           </div>
           <div class="tag-grid">
@@ -415,8 +435,8 @@
           4. 전화 또는 카카오톡으로 상담
         </div>
         <div class="btns">
-          <a class="btn btn-primary" href="tel:010-XXXX-XXXX">바로 전화하기</a>
-          <a class="btn btn-outline" href="https://open.kakao.com/">카카오톡 상담</a>
+          <a class="btn btn-primary" href="tel:010-5422-2420">바로 전화하기</a>
+          <a class="btn btn-outline" href="https://open.kakao.com/o/ggAgrJli">카카오톡 상담</a>
         </div>
       </div>
     </div>
@@ -429,13 +449,13 @@
         <div class="section-title">무료 견적 문의</div>
         <div class="muted" style="color:#ddd;">서울 · 경기 전지역에서 상가 철거, 사무실 철거, 원상복구 문의를 받고 있습니다. 현장 사진을 보내주시면 보다 빠르게 상담 가능합니다.</div>
         <div style="margin-top:18px; color:#f3f3f3;">
-          전화: 010-XXXX-XXXX<br>
+          전화: 010-5422-2420<br>
           카카오톡: 상담 링크 연결<br>
           인스타그램: @pparukko_demolition
         </div>
         <div class="btns">
-          <a class="btn btn-primary" href="tel:010-XXXX-XXXX">바로 전화하기</a>
-          <a class="btn btn-outline" href="https://open.kakao.com/">카카오톡 문의</a>
+          <a class="btn btn-primary" href="tel:010-5422-2420">바로 전화하기</a>
+          <a class="btn btn-outline" href="https://open.kakao.com/o/ggAgrJli">카카오톡 문의</a>
         </div>
       </div>
       <div class="card contact-box">
@@ -448,7 +468,7 @@
           <input class="span-2" placeholder="희망 일정">
           <textarea class="span-2" placeholder="기타 요청사항 또는 현장 설명"></textarea>
         </div>
-        <div class="btns"><a class="btn btn-primary" href="https://open.kakao.com/">견적 문의 보내기</a></div>
+        <div class="btns"><a class="btn btn-primary" href="https://open.kakao.com/o/ggAgrJli">견적 문의 보내기</a></div>
         <div class="muted">실제 사용 시에는 아임웹 문의폼 또는 외부 폼 연동 기능으로 연결하면 됩니다.</div>
       </div>
     </div>
@@ -526,8 +546,8 @@
         <div class="case-title">협업 문의</div>
         <div class="muted" style="color:#ddd;">부동산 중개사 · 인테리어 업체 협업 문의 환영합니다.</div>
         <div class="btns" style="justify-content:center;">
-          <a class="btn btn-primary" href="tel:010-XXXX-XXXX">전화 문의</a>
-          <a class="btn btn-outline" href="https://open.kakao.com/">카카오톡 문의</a>
+          <a class="btn btn-primary" href="tel:010-5422-2420">전화 문의</a>
+          <a class="btn btn-outline" href="https://open.kakao.com/o/ggAgrJli">카카오톡 문의</a>
         </div>
       </div>
     </div>
@@ -546,8 +566,8 @@
           <div class="strength-item">서울 · 경기 전지역 대응</div>
         </div>
         <div class="btns">
-          <a class="btn btn-primary" href="tel:010-XXXX-XXXX">중개사 협업 전화</a>
-          <a class="btn btn-outline" href="https://open.kakao.com/">카카오톡 협업 문의</a>
+          <a class="btn btn-primary" href="tel:010-5422-2420">중개사 협업 전화</a>
+          <a class="btn btn-outline" href="https://open.kakao.com/o/ggAgrJli">카카오톡 협업 문의</a>
         </div>
       </div>
       <div class="yellow-box">
@@ -569,12 +589,12 @@
         <div class="section-sub">아래 영역에 실제 현장 사진을 넣으면 홈페이지 완성도가 훨씬 올라갑니다.</div>
       </div>
       <div class="gallery-grid">
-        <div class="gallery-card"><div class="label">PHOTO 1</div><div class="gallery-title">철거 전 현장</div><div class="muted">실제 사진으로 교체해서 사용하세요.</div></div>
-        <div class="gallery-card"><div class="label">PHOTO 2</div><div class="gallery-title">내부 철거 진행</div><div class="muted">실제 사진으로 교체해서 사용하세요.</div></div>
-        <div class="gallery-card"><div class="label">PHOTO 3</div><div class="gallery-title">폐기물 정리</div><div class="muted">실제 사진으로 교체해서 사용하세요.</div></div>
-        <div class="gallery-card"><div class="label">PHOTO 4</div><div class="gallery-title">원상복구 마감</div><div class="muted">실제 사진으로 교체해서 사용하세요.</div></div>
-        <div class="gallery-card"><div class="label">PHOTO 5</div><div class="gallery-title">상가 철거 완료</div><div class="muted">실제 사진으로 교체해서 사용하세요.</div></div>
-        <div class="gallery-card"><div class="label">PHOTO 6</div><div class="gallery-title">사무실 철거 완료</div><div class="muted">실제 사진으로 교체해서 사용하세요.</div></div>
+        <div class="gallery-card"><img src="images/work1.jpg" style="width:100%;border-radius:14px;margin-bottom:10px;"><div class="gallery-title">상가 내부 철거 진행</div></div>
+        <div class="gallery-card"><img src="images/work2.jpg" style="width:100%;border-radius:14px;margin-bottom:10px;"><div class="gallery-title">유리 프레임 철거 작업</div></div>
+        <div class="gallery-card"><img src="images/work3.jpg" style="width:100%;border-radius:14px;margin-bottom:10px;"><div class="gallery-title">데코타일 바닥 철거</div></div>
+        <div class="gallery-card"><img src="images/work4.jpg" style="width:100%;border-radius:14px;margin-bottom:10px;"><div class="gallery-title">판넬 벽체 철거</div></div>
+        <div class="gallery-card"><img src="images/work5.jpg" style="width:100%;border-radius:14px;margin-bottom:10px;"><div class="gallery-title">철거 진행 현장</div></div>
+        <div class="gallery-card"><img src="images/work6.jpg" style="width:100%;border-radius:14px;margin-bottom:10px;"><div class="gallery-title">철거 완료 정리</div></div>
       </div>
     </div>
   </section>
@@ -595,6 +615,10 @@
         <div class="section-title">오시는 길</div>
         <div class="muted" style="color:#ddd;">경기도 시흥시 정왕동 375-1</div>
         <div class="placeholder" style="margin-top:18px; min-height:220px; justify-content:center; text-align:center;">네이버지도 / 카카오맵 iframe 또는 지도 이미지 영역</div>
+        <div class="btns" style="margin-top:14px;">
+          <a class="btn btn-primary" href="https://map.naver.com/" target="_blank" rel="noopener noreferrer">네이버지도 보기</a>
+          <a class="btn btn-outline" href="https://map.kakao.com/" target="_blank" rel="noopener noreferrer">카카오맵 보기</a>
+        </div>
         <div class="muted" style="margin-top:12px;">실제 배포 시 네이버지도 링크나 카카오맵 링크를 연결하면 됩니다.</div>
       </div>
     </div>
@@ -610,16 +634,21 @@
       <div>주소: 경기도 시흥시 정왕동 375-1</div>
       <div>이메일: pparukko@naver.com</div>
       <div class="links">
-        <a href="tel:010-XXXX-XXXX">전화 상담</a>
-        <a href="https://open.kakao.com/">카카오톡 상담</a>
+        <a href="tel:010-5422-2420">전화 상담</a>
+        <a href="https://open.kakao.com/o/ggAgrJli">카카오톡 상담</a>
         <a href="https://instagram.com/pparukko_demolition">인스타그램</a>
       </div>
     </div>
   </footer>
 
+  <div class="floating-consult">
+    <a class="floating-phone" href="tel:010-5422-2420">전화 상담 바로가기</a>
+    <a class="floating-kakao" href="https://open.kakao.com/o/ggAgrJli" target="_blank" rel="noopener noreferrer">카카오톡 실시간 상담</a>
+  </div>
+
   <div class="mobile-bar">
-    <a class="mobile-call" href="tel:010-XXXX-XXXX">전화 상담</a>
-    <a class="mobile-kakao" href="https://open.kakao.com/">카카오톡 상담</a>
+    <a class="mobile-call" href="tel:010-5422-2420">전화 상담</a>
+    <a class="mobile-kakao" href="https://open.kakao.com/o/ggAgrJli">카카오톡 상담</a>
   </div>
 </body>
 </html>
