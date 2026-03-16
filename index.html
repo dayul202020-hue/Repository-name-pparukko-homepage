@@ -1,62 +1,57 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>빠루꼬 철거</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>빠루꼬 철거</title>
+  <style>
+    body{
+      margin:0;
+      font-family:sans-serif;
+      background:#111;
+      color:#fff;
+      text-align:center;
+    }
 
-<style>
+    h1{
+      font-size:48px;
+      margin-top:50px;
+      margin-bottom:20px;
+    }
 
-body{
-font-family:sans-serif;
-background:#111;
-color:white;
-text-align:center;
-}
+    .phone{
+      font-size:28px;
+      margin-bottom:40px;
+    }
 
-h1{
-font-size:40px;
-margin-top:40px;
-}
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
+      padding:30px;
+      max-width:1400px;
+      margin:0 auto;
+    }
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
-padding:40px;
-}
-
-.gallery img{
-width:100%;
-border-radius:10px;
-}
-
-.phone{
-margin:40px;
-font-size:24px;
-}
-
-</style>
+    .gallery img{
+      width:100%;
+      border-radius:14px;
+      display:block;
+    }
+  </style>
 </head>
-
 <body>
+  <h1>빠루꼬 철거</h1>
+  <div class="phone">문의 : 010-XXXX-XXXX</div>
 
-<h1>빠루꼬 철거</h1>
-
-<div class="phone">
-문의 : 010-XXXX-XXXX
-</div>
-
-<div class="gallery">
-
-<img src="카카오톡_20260316_210654092_14.jpg">
-<img src="카카오톡_20260316_210654092_15.jpg">
-<img src="카카오톡_20260316_210654092_16.jpg">
-<img src="카카오톡_20260316_210654092_23.jpg">
-<img src="카카오톡_20260316_210654092_25.jpg">
-<img src="카카오톡_20260316_210654092_27.jpg">
-<img src="카카오톡_20260316_210654092_28.jpg">
-
-</div>
-
+  <div class="gallery">
+    <img src="work1.jpg">
+    <img src="work2.jpg">
+    <img src="work3.jpg">
+    <img src="work4.jpg">
+    <img src="work5.jpg">
+    <img src="work6.jpg">
+    <img src="work7.jpg">
+  </div>
 </body>
 </html>
