@@ -16,272 +16,142 @@
   <meta property="og:image" content="https://너네도메인.com/image.jpg">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Pretendard', sans-serif;
-    }
+    * {margin:0;padding:0;box-sizing:border-box;font-family:'Pretendard',sans-serif;}
+    body {line-height:1.6;color:#222;background:#f8f8f8;}
 
-    body {
-      line-height: 1.6;
-      color: #222;
-      background: #f8f8f8;
-    }
-
-    header {
-      background: #111;
-      color: white;
-      padding: 18px 24px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    header .wrap {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h2 {
-      font-size: 24px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 18px;
-      font-size: 15px;
-    }
+    header {background:#111;color:white;padding:18px;position:sticky;top:0;z-index:1000;}
+    header .wrap {max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+    nav a {color:white;text-decoration:none;margin-left:16px;}
 
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('main.jpg') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
+      background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url('main.jpg') center/cover no-repeat;
+      color:white;text-align:center;padding:100px 20px;
     }
 
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 16px;
+    .hero-buttons {
+      display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:20px;
     }
 
-    .hero p {
-      font-size: 20px;
-      margin-bottom: 24px;
+    .btn {
+      background:#ff6b00;color:white;padding:14px 26px;
+      border-radius:8px;text-decoration:none;font-weight:bold;
     }
 
-    .hero .btn {
-      display: inline-block;
-      background: #ff6b00;
-      color: white;
-      padding: 14px 28px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
+    .btn-dark {background:#222;}
 
-    section {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 70px 20px;
-    }
+    section {max-width:1200px;margin:0 auto;padding:70px 20px;}
+    .section-title {text-align:center;margin-bottom:40px;}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+    .services {display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
+    .card {background:white;padding:24px;border-radius:12px;}
 
-    .section-title h2 {
-      font-size: 32px;
-      margin-bottom: 10px;
-      color: #111;
-    }
-
-    .section-title p {
-      color: #666;
-      font-size: 17px;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 14px;
-      padding: 28px 22px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    }
-
-    .card h3 {
-      margin-bottom: 12px;
-      color: #111;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      background: #ddd;
-    }
+    .gallery {display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+    .gallery img {width:100%;height:240px;object-fit:cover;border-radius:12px;}
 
     .contact-box {
-      background: #111;
-      color: white;
-      border-radius: 16px;
-      padding: 40px 30px;
-      text-align: center;
+      background:#111;color:white;padding:40px;border-radius:16px;text-align:center;
     }
 
-    .contact-box h2 {
-      font-size: 30px;
-      margin-bottom: 12px;
-    }
+    .phone {font-size:28px;color:#ffb066;margin-top:10px;}
 
-    .contact-box p {
-      margin-bottom: 10px;
-      font-size: 17px;
-    }
+    footer {background:#1c1c1c;color:#ccc;text-align:center;padding:30px;margin-top:50px;}
 
-    .phone {
-      font-size: 30px;
-      font-weight: bold;
-      color: #ffb066;
-      margin-top: 10px;
-    }
+    /* 🔥 모바일 고정 버튼 */
+    .mobile-fixed-bar {display:none;}
 
-    footer {
-      background: #1c1c1c;
-      color: #ccc;
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 14px;
-      margin-top: 50px;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 30px;
+    @media(max-width:768px){
+      .mobile-fixed-bar {
+        display:flex;position:fixed;bottom:0;left:0;width:100%;z-index:9999;
       }
-
-      .hero p {
-        font-size: 17px;
+      .mobile-fixed-bar a {
+        flex:1;text-align:center;padding:16px;color:white;text-decoration:none;font-weight:bold;
       }
-
-      header .wrap {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      nav a {
-        margin: 0 8px;
-      }
+      .mobile-call {background:#ff6b00;}
+      .mobile-kakao {background:#222;}
+      body {padding-bottom:70px;}
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <div class="wrap">
-      <h2>빠루꼬 철거</h2>
-      <nav>
-        <a href="#about">업체소개</a>
-        <a href="#service">서비스</a>
-        <a href="#gallery">작업사진</a>
-        <a href="#contact">문의</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="wrap">
+    <h2>빠루꼬 철거</h2>
+    <nav>
+      <a href="#about">소개</a>
+      <a href="#service">서비스</a>
+      <a href="#gallery">사진</a>
+      <a href="#contact">문의</a>
+    </nav>
+  </div>
+</header>
 
-  <section class="hero">
-    <h1>시흥 철거 전문 빠루꼬 철거</h1>
-    <p>정왕동, 배곧, 시흥 전지역 철거 및 원상복구 전문 업체</p>
-    <a href="tel:01054222420" class="btn">지금 바로 상담하기</a>
-  </section>
+<section class="hero">
+  <h1>시흥 철거 전문 빠루꼬 철거</h1>
+  <p>정왕동, 배곧, 시흥 전지역 철거 및 원상복구 전문 업체</p>
 
-  <section id="about">
-    <div class="section-title">
-      <h2>믿고 맡기는 시흥 철거 업체</h2>
-      <p>빠르고 깔끔한 철거, 합리적인 비용, 책임감 있는 마무리</p>
-    </div>
+  <div class="hero-buttons">
+    <a href="tel:01054222420" class="btn">📞 전화 상담</a>
+    <a href="https://open.kakao.com/o/ggAgrJli" class="btn btn-dark" target="_blank">💬 카톡 상담</a>
+  </div>
+</section>
 
-    <div class="card">
-      <p>
-        빠루꼬 철거는 시흥 정왕동을 중심으로 상가철거, 원상복구, 내부철거, 폐기물처리 등
-        다양한 철거 작업을 전문적으로 진행하고 있습니다.
-        현장 확인부터 견적, 철거, 정리까지 깔끔하게 책임지고 진행합니다.
-      </p>
-    </div>
-  </section>
+<section id="about">
+  <div class="section-title">
+    <h2>믿고 맡기는 시흥 철거 업체</h2>
+    <p>빠르고 깔끔한 철거, 합리적인 비용</p>
+  </div>
+  <div class="card">
+    빠루꼬 철거는 시흥 정왕동 중심 철거 전문 업체입니다.
+    상가철거, 원상복구, 내부철거, 폐기물처리까지 책임 시공합니다.
+  </div>
+</section>
 
-  <section id="service">
-    <div class="section-title">
-      <h2>시흥 상가철거 / 원상복구 전문</h2>
-      <p>현장 상황에 맞는 정확한 견적과 신속한 작업 진행</p>
-    </div>
+<section id="service">
+  <div class="section-title">
+    <h2>시흥 상가철거 / 원상복구</h2>
+  </div>
 
-    <div class="services">
-      <div class="card">
-        <h3>상가 철거</h3>
-        <p>식당, 사무실, 매장, 상가 내부 철거 작업</p>
-      </div>
-      <div class="card">
-        <h3>원상복구</h3>
-        <p>임대차 종료 전 원상복구 공사 및 마감 정리</p>
-      </div>
-      <div class="card">
-        <h3>폐기물 처리</h3>
-        <p>철거 후 발생하는 폐기물 처리까지 원스톱 진행</p>
-      </div>
-      <div class="card">
-        <h3>부분 철거</h3>
-        <p>판넬, 데코타일, 천장, 벽체 등 부분 철거 가능</p>
-      </div>
-    </div>
-  </section>
+  <div class="services">
+    <div class="card"><h3>상가 철거</h3></div>
+    <div class="card"><h3>원상복구</h3></div>
+    <div class="card"><h3>폐기물 처리</h3></div>
+    <div class="card"><h3>부분 철거</h3></div>
+  </div>
+</section>
 
-  <section id="gallery">
-    <div class="section-title">
-      <h2>작업 현장 사진</h2>
-      <p>실제 진행한 시흥 철거 및 원상복구 현장</p>
-    </div>
+<section id="gallery">
+  <div class="section-title">
+    <h2>작업 사진</h2>
+  </div>
 
-    <div class="gallery">
-      <img src="img1.jpg" alt="시흥 상가 철거 작업 현장">
-      <img src="img2.jpg" alt="정왕동 원상복구 철거 전후">
-      <img src="img3.jpg" alt="시흥 내부철거 작업 사진">
-      <img src="img4.jpg" alt="배곧 상가 철거 현장">
-    </div>
-  </section>
+  <div class="gallery">
+    <img src="img1.jpg" alt="시흥 철거 작업 현장">
+    <img src="img2.jpg" alt="정왕동 원상복구 현장">
+    <img src="img3.jpg" alt="상가 철거 전후">
+    <img src="img4.jpg" alt="배곧 철거 현장">
+  </div>
+</section>
 
-  <section id="contact">
-    <div class="contact-box">
-      <h2>무료 견적 문의</h2>
-      <p>빠른 상담 / 현장 확인 / 합리적인 견적</p>
-      <p>대표 : 김호종</p>
-      <p>주소 : 시흥시 정왕동 375-1</p>
-      <p class="phone">010-5422-2420</p>
-    </div>
-  </section>
+<section id="contact">
+  <div class="contact-box">
+    <h2>무료 견적 문의</h2>
+    <p>대표 김호종</p>
+    <p>시흥시 정왕동 375-1</p>
+    <p class="phone">010-5422-2420</p>
+  </div>
+</section>
 
-  <footer>
-    <p>빠루꼬 철거 | 대표 김호종 | 사업자 579-43-01220</p>
-    <p>주소 : 시흥시 정왕동 375-1 | 문의 : 010-5422-2420</p>
-  </footer>
+<footer>
+  빠루꼬 철거 | 대표 김호종 | 사업자 579-43-01220
+</footer>
+
+<!-- 🔥 모바일 고정 버튼 -->
+<div class="mobile-fixed-bar">
+  <a href="tel:01054222420" class="mobile-call">📞 전화</a>
+  <a href="https://open.kakao.com/o/ggAgrJli" class="mobile-kakao" target="_blank">💬 카톡</a>
+</div>
 
 </body>
 </html>
